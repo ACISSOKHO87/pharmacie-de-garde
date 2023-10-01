@@ -1,0 +1,9 @@
+export interface UserQuery {
+    _id?: string,
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string,
+    userStatus: string,
+    creationDate: Date
+}

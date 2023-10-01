@@ -1,0 +1,560 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+img {
+    aspect-ratio: 16/9;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+}
+
+.App {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/****************************************************************************
+                            HEADER
+****************************************************************************/
+
+header {
+    width: 100%;
+    position: relative;
+    background-color: #0069b4;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+header #menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+header #menu a p {
+    display: block;
+    text-align: center;
+    line-height: 1;
+    margin-left: 5px;
+}
+
+header .toggle {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.toggle div {
+    width: 70%;
+    height: 100vh;
+    padding-top: 20px;
+    background: #fff;
+    z-index: 100;
+}
+
+.nav-barres {
+    display: none;
+}
+
+.nav-barres li {
+    font-size: 30px;
+    padding: 10px;
+    text-align: start;
+    color: #666;
+}
+
+
+
+/****************************************************************************
+                            HOME
+****************************************************************************/
+.main-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - calc(200px));
+    margin-bottom: 30px;
+}
+
+.about-pharmaGard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+
+.about-pharmaGard .logo-container {
+    width: 50%;
+}
+
+.about-pharmaGard .text-container {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #666;
+    text-align: start;
+}
+
+.google-map-container {
+    width: 100%;
+    padding: 0 5%;
+    background-color: #03D069;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-map {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.about-pharma-gard {
+    width: 100%;
+    padding: 30px 5% 20px 5%;
+    text-align: start;
+}
+
+.text-container h1,
+.about-pharma-gard h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    color: #666;
+}
+
+.about-pharma-gard p {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #212529;
+    font-weight: 400;
+}
+
+.search-container {
+    margin: 10px;
+    width: 100%;
+    padding: 2% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.items {
+    width: 60%;
+    margin: 10px auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.item {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    background: transparent;
+}
+
+.search-submit {
+    width: 60%;
+    padding: 10px;
+    margin: 10px auto;
+    background: #0069b4;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.search-submit input {
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+#submit {
+    width: 100%;
+    padding: 10px;
+    background: #0069b4;
+    color: #fff;    
+    cursor: pointer;
+}
+
+/****************************************************************************
+                            LOGIN
+****************************************************************************/
+
+.main-login, .main-forgot, 
+.main-reset, .main-register,
+.main-contact, .main-admin {
+    width: 100%;
+    min-height: 80vh;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.login-section, .forgot-section,
+.reset-section, .contact-section,
+.register-section{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorMsg, .succes{
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+}
+
+.errorMsg {
+    background: red;
+}
+
+.succes {
+    background: #e3fcf7;
+}
+
+.container-form {
+    width: 100%;
+    margin: 10px auto;
+    padding: 25px;
+    border: 3px solid #0069b4;
+    border-radius: 15px;
+}
+
+
+.container-form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #E8F0FE;
+    border-radius: 5px;
+}
+
+.pswForget {
+    width: 90%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.pswForget p a,
+.login-register p a {
+    color: #0069b4;
+}
+
+.pswForget p a:hover,
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+.login-register {
+    width: 90%;
+    margin-top: 10px;
+    text-align: left;
+    color: #212529;
+}
+
+
+/****************************************************************************
+                            FORGOT, RESET
+****************************************************************************/
+.container-form-login,
+.container-form-forgot,
+.container-form-reset {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #0069b4;
+    width: 90%;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 15px;
+}
+
+
+/****************************************************************************
+                            REGISTER, CONTACT
+****************************************************************************/
+.register, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.register h2, .contact h2 {
+    margin: 20px auto ;
+    width: 100%;
+}
+
+.register form, .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 3px solid #0069b4;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.contact form textarea {  
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px auto;
+    background: #E8F0FE;
+    border-radius: 5px;
+}
+
+.register form .infos-titulaire,
+.register form .infos-pharmacie {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.register form .infos-titulaire input,
+.register form .infos-pharmacie  input,
+.register form .infos-pharmacie select{
+    width: 100%;
+    display: block;
+    text-align: center;    
+    margin: 15px auto;
+    padding: 10px;
+    background: #E8F0FE;
+}
+
+#submit-register, #submit-contact {
+    width: 100%;
+    padding: 10px;
+    background: #0069b4;
+    border-radius: 5px;
+    color: #fff;    
+    cursor: pointer;
+}
+
+/****************************************************************************
+                            FOOTER
+****************************************************************************/
+.footer-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 5%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    background-color: #0069b4;
+}
+
+@media screen and (min-width: 768px)  {
+
+    /****************************************************************************
+                            HEADER
+    ****************************************************************************/
+
+    header {
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+    /* menu */
+    #menu {
+        display: none;
+    }
+
+    header .nav-container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    header .nav-barres {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    header .nav-barres div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    header .nav-barres div ul{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    header .nav-barres li {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        color: #fff;
+        padding: 5px 0;
+    }
+
+/****************************************************************************
+                            HOME
+****************************************************************************/
+    .about-pharmaGard {
+        width: 100%;
+        height: 150px;
+    }
+
+    .about-pharmaGard {
+        flex-direction: row;
+    }
+
+    .about-pharmaGard .logo-container {
+        width: 20%;
+    }
+
+    .google-map {
+        width: 80%;
+    }
+
+    .about-pharma-gard div {
+        width: 80%;
+        margin: auto;
+    }
+    .search-container {
+        margin: 0;
+    }
+
+    .search-container form {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+    }
+    
+    .search-submit {
+        width: 40%;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    
+    .items {
+        width: 40%;
+        margin: 0;
+    }
+
+    .submit input, .item {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /****************************************************************************
+                            LOGIN
+    ****************************************************************************/
+
+    .container-form, .pswForget, .login-register { 
+        width: 40%;
+    }
+
+
+    /****************************************************************************
+                            REGISTER, CONTACT
+    ****************************************************************************/
+    .register form, .contact form {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+
+    .register form .infos-titulaire,
+    .register form .infos-pharmacie{
+        width: 45%;
+    }
+
+    .contact form input {
+        width: 48%;
+        text-align: start;
+    }
+    
+    .contact form .full {
+        width: 100%;
+    }
+    #submit-register, #submit-contact {
+        width: 30%;
+        margin: auto;
+    }
+}
+
+@media  screen and (min-width: 1024px){
+
+    /****************************************************************************
+                            LOGIN
+    ****************************************************************************/
+
+    .container-form, .pswForget, .login-register { 
+        width: 30%;
+    }
+}
